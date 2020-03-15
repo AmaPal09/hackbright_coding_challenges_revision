@@ -41,20 +41,36 @@ class Node(object):
         return "".join(out)
 
 
-    def remove_node(node):
-        """Given a node in a linked list, remove it.
+    # @staticmethod 
+def remove_node(node):
+    """Given a node in a linked list, remove it.
 
-            Remove this node from a linked list. Note that we do not have access to
-            any other nodes of the linked list, like the head or the tail.
+        Remove this node from a linked list. Note that we do not have access to
+        any other nodes of the linked list, like the head or the tail.
 
-            Does not return anything; changes list in place.
-        """
+        Does not return anything; changes list in place.
 
-        if not node.next: 
-            raise ValueError("Tail node cannot be deleted")
+        >>> n1 = Node(1)
+        >>> n2 = Node(2)
+        >>> n3 = Node(3)
+        >>> n4 = Node(4)
+        >>> n1.next = n2
+        >>> n2.next = n3
+        >>> n3.next = n4
+        >>> remove_node(n3)
+        >>> n1.as_string()
+        '124'
 
-        node.data = node.next.data 
-        node.next = node.next.next 
+    """
+
+    if not node.next: 
+        raise ValueError("Tail node cannot be deleted")
+
+    node.data = node.next.data 
+    node.next = node.next.next 
+
+    # return node.as_string()
+
 
 
 if __name__ == "__main__": 

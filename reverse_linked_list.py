@@ -49,11 +49,29 @@ def reverse_linked_list(head):
 
     while n: 
         out_head = Node(n.data, out_head)
+        # print(out_head.as_string())
         n = n.next 
 
     return out_head
 
 
+def reverse_linked_list_2(head):
+    """Given LL head node, return head node of new, reversed linked list.
+
+    >>> ll = Node(1, Node(2, Node(3)))
+    >>> reverse_linked_list_2(ll).as_string()
+    '321'
+    """
+
+    prev_node = None 
+    current_node = head
+
+    while current_node is not None: 
+        prev_node = Node(current_node.data, prev_node)
+        current_node = current_node.next
+
+    return prev_node
+    
 if __name__ == "__main__": 
 
     import doctest 
