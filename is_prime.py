@@ -171,7 +171,7 @@ def main():
         x = is_prime(n)
         c += x
     print("Total prime numbers in the range [with func 1]:", c)
-    t1 = time.time()
+            t1 = time.time()
     print("Time required: ", t1 - t0)
 
     t0 = time.time()

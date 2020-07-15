@@ -66,7 +66,7 @@ def deduped_hb(items):
     results_list = [] 
 
     for item in items: 
-        if item not in results_list: 
+        if item not in seen: 
             results_list.append(item)
             seen.add(item)
 

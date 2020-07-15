@@ -68,7 +68,7 @@ class BinaryNode(object):
             # overselves 
             return max(left, right) + 1 
 
-        return _num_descendants(self)
+        return _num_descendants(self) is not None
 
 
 

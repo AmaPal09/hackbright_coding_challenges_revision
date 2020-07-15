@@ -30,6 +30,7 @@
 
 def fit_to_width(string, limit):
     """Print string within a character limit.
+    
         >>> fit_to_width('Hello, world! I love Python and Hackbright',
         ...              10)
         Hello,
@@ -37,7 +38,6 @@ def fit_to_width(string, limit):
         love
         Python and
         Hackbright
-
     """
 
     # START SOLUTION
@@ -64,13 +64,3 @@ def fit_to_width(string, limit):
 
     for line in lines:
         print(line)
-
-
-if __name__ == "__main__" : 
-
-    import doctest 
-
-    results = doctest.testmod()
-
-    if results.failed == 0 : 
-        print("ALL TESTS PASSED")
